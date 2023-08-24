@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xxx的个人空间</title>
+    <link rel="stylesheet" href="./CSS/user-profile.css">
+    <script src="./JS/profile.js"></script>
+</head>
+
+<body>
+    <div class="header with-shadow-darker"></div>
+
+    <!-- 资料卡 -->
+    <div class="profile">
+        <span class="user-info">
+            <!-- 头像 -->
+            <span class="user-avatar">
+                <img class="avatar-img avatar-face" alt="用户头像" src="./Images/default-avatar.jpg">
+            </span>
+
+            <!-- 基本资料 -->
+            <span class="user-basic-container">
+                <div class="user-basic">
+                    <div id="user-name">用户名</div>
+                    <div id="user-id">id：</div>
+                    <div class="user-follow-follower">
+                        <span class="count-container">
+                            <span class="count" id="follow_count">关注&nbsp;0</span>
+                        </span>
+                        <span class="count-container">
+                            <span class="count" id="follower_count">粉丝&nbsp;0</span>
+                        </span>
+                        <span class="count-container">
+                            <span class="count" id="total_favorited">获赞&nbsp;0</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- 个人简介 -->
+                <div id="user-signature">这个人很懒，所以什么都没有写......</div>
+            </span>
+        </span>
+    </div>
+
+    <!-- 修改资料卡按钮 -->
+    <input type="checkbox" id="display">
+    <label for="display" id="edit-btn">编辑资料</label>
+
+    <!-- 背景变暗遮罩 -->
+    <div for="display" class="overlay edit-wp-animate"></div>
+
+    <!-- 修改个人资料浮窗 -->
+    <div class="edit-wp with-shadow edit-wp-animate">
+        <!-- 关闭按钮 -->
+        <label for="display" class="close-btn" title="关闭">&times;</label>
+
+    </div>
+
+    <!-- 作品和喜欢的视频 -->
+    <div class="video-list">
+        <div class="list-title with-shadow-lighter">
+            <div class="work-like-container">
+                <span class="count-container like">
+                    <span class="count active-tab" id="work_count">作品&nbsp;0</span>
+                </span>
+                <span class="count-container like">
+                    <span class="count" id="like_count">喜欢&nbsp;0</span>
+                </span>
+            </div>
+        </div>
+        <div class="video-container with-shadow-lighter"></div>
+    </div>
+</body>
+
+</html>
